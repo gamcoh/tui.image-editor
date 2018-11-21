@@ -109,6 +109,7 @@ class ImageEditor {
          * @private
          */
         this._handlers = {
+            fontChange: this._onChangeFont.bind(this),
             keydown: this._onKeyDown.bind(this),
             mousedown: this._onMouseDown.bind(this),
             objectActivated: this._onObjectActivated.bind(this),
@@ -284,6 +285,11 @@ class ImageEditor {
     _attachDomEvents() {
         // ImageEditor supports IE 9 higher
         document.addEventListener('keydown', this._handlers.keydown);
+
+        const fontSelect = document.querySelector('#tui-image-editor-select');
+        if (fontSelect !== 'undefined') {
+            fontSelect.addEventListener('change', this._handlers.fontChange);
+        }
     }
 
     /**
@@ -293,6 +299,15 @@ class ImageEditor {
     _detachDomEvents() {
         // ImageEditor supports IE 9 higher
         document.removeEventListener('keydown', this._handlers.keydown);
+    }
+
+    /**
+     * On change font in text
+     * @param {ChangeEvent} e - Event object
+     * @private
+     */
+    _onChangeFont(e) {
+        this.ui.options.text.fontFamily = e.target.value;
     }
 
     /**

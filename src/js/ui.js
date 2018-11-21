@@ -238,6 +238,9 @@ class Ui {
                 width: '100%',
                 height: '100%'
             },
+            text: {
+                fontFamily: 'Noto Sans'
+            },
             menuBarPosition: 'bottom'
         }, options);
     }

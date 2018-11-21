@@ -1,5 +1,33 @@
 export default ({iconStyle: {normal, active}}) => (`
     <ul class="tui-image-editor-submenu-item">
+        <li class="tui-image-editor-partition">
+            <div></div>
+        </li>
+        <li>
+            <div>
+                <select name="text-font-family" id="tui-image-editor-select">
+                    <option value="Noto Sans">Noto Sans</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Serif">Serif</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Sans-Serif">Sans-Serif</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Palatino">Palatino</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Bookman">Bookman</option>
+                    <option value="Avant Garde">Avant Garde</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                </select>
+            </div>
+        </li>
+        <li class="tui-image-editor-partition">
+            <div></div>
+        </li>
         <li id="tie-text-effect-button">
             <div class="tui-image-editor-button bold">
                 <div>

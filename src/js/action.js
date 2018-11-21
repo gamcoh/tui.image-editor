@@ -446,7 +446,7 @@ export default {
                     styles: {
                         fill: this.ui.text.textColor,
                         fontSize: util.toInteger(this.ui.text.fontSize),
-                        fontFamily: 'Noto Sans'
+                        fontFamily: this.ui.options.text.fontFamily
                     }
                 }).then(() => {
                     this.changeCursor('default');
